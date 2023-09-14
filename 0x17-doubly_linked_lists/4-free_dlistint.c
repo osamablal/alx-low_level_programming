@@ -1,22 +1,18 @@
-/*
- * File: 4-free_dlistint.c
- * Auth: Gedeon Obae Gekonge
- */
-
 #include "lists.h"
+#include <stdlib.h>
 
 /**
- * free_dlistint - Frees a linked dlistint_t list.
- * @head: The head of the dlistint_t list.
+ * free_dlistint - free a dlistint_t list
+ * @head: head of linked list
  */
 void free_dlistint(dlistint_t *head)
 {
-	dlistint_t *tmp;
+	dlistint_t *next;
 
-	while (head)
+	while (head != NULL)
 	{
-		tmp = head->next;
+		next = head->next;
 		free(head);
-		head = tmp;
+		head = next;
 	}
 }
