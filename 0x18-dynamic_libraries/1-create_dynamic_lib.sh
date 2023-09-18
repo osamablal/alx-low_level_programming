@@ -1,3 +1,5 @@
 #!/bin/bash
-gcc -fPIC -c *.c
-gcc -shared -o liball.so *.o
+
+// A script that creates a dynamic library called liball.so
+
+gcc *.c -fPIC -shared -o liball.so
